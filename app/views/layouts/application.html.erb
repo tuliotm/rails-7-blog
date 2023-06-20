@@ -20,8 +20,16 @@
     </div>
 
     <div class="container">
+      <% flash.each do |type, message| %>
+        <div class="alert alert-<%= type == 'alert' ? 'danger' : 'success'%> warning d-flex align-items-center w-100" role="alert" style='height: 50px; display: flex; justify-content: center; align-items: center; margin: 0 auto;'>
+          <div>
+            <%= message %>
+          </div>
+        </div>
+      <% end %>
       <%= yield %>
     </div>
+
 
     <footer class='bg-primary text-white text-center mt-5 p-4'>
       TulioTM <%= Date.current.year %>.
