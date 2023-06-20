@@ -79,3 +79,7 @@ gem "rails-i18n", "~> 7.0"
 gem "pry", "~> 0.14.2"
 
 gem "byebug", "~> 11.1"
+
+gem "friendly_id", "~> 5.5"
+
+gem "pg_search", "~> 2.3"
