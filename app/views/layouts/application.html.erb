@@ -21,14 +21,24 @@
 
     <div class="container">
       <% flash.each do |type, message| %>
-        <div class="alert alert-<%= type == 'alert' ? 'danger' : 'success'%> warning d-flex align-items-center w-100" role="alert" style='height: 50px; display: flex; justify-content: center; align-items: center; margin: 0 auto;'>
+        <div class='alert alert-<%= type == 'alert' ? 'danger' : 'success' %> alert-dismissible fade show' role='alert'>
           <div>
             <%= message %>
           </div>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
       <% end %>
       <%= yield %>
     </div>
+
+    <script>
+      document.querySelectorAll('.btn-close').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          this.closest('.alert').remove();
+        });
+      });
+    </script>
+
 
 
     <footer class='bg-primary text-white text-center mt-5 p-4'>

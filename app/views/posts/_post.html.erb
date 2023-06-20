@@ -12,6 +12,7 @@
 
     <%= link_to "Ler Artigo", post_path(post), class: 'btn btn-primary btn-sm' %>
     <%= link_to "Editar", edit_post_path(post), class: 'btn btn-secondary btn-sm' %>
-    <%= link_to "Apagar", post, method: :delete, class: 'btn btn-danger btn-sm', data: { confirm: 'Você tem certeza?' } %>
+    <%= link_to "Apagar", post, method: :delete, class: 'btn btn-danger btn-sm', 
+      data: { confirm: 'Você tem certeza?' } %>
   </div>
 </div>
