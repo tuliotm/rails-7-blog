@@ -56,12 +56,9 @@ class PostsController < ApplicationController
 
   # DELETE /posts/1 or /posts/1.json
   def destroy
-    byebug
     @post.destroy
-
-    byebug
     respond_to do |format|
-      format.html { redirect_to posts_url, notice: "O post foi removido com sucesso!" }
+      format.html { redirect_to posts_url, notice: 'O post foi removido com sucesso.' }
       format.json { head :no_content }
     end
   end
